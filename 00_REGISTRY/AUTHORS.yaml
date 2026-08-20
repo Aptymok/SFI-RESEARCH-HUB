@@ -3,7 +3,7 @@ authors:
     canonical_name: Juan Antonio Marin Liera
     email: jmarin@systemfriction.org
     affiliation: System Friction Institute
-    orcid: null
+    orcid: https://orcid.org/0009-0002-3714-1467
   - id: EDWING_PEREDO_GUADARRAMA
     canonical_name: Edwing Peredo Guadarrama
     email: kxtxr@systemfriction.org
@@ -11,5 +11,6 @@ authors:
     orcid: null
 
 notes:
-  - ORCID remains unset until verified.
-  - CHI anonymous exports must remove names, emails, affiliation, and identifying repository links during review.
+  - Juan Antonio Marin Liera ORCID verified from the author-provided canonical ORCID URL.
+  - Edwing Peredo Guadarrama ORCID remains unset until verified.
+  - CHI anonymous exports must remove names, emails, affiliation, ORCID, and identifying repository links during review.
