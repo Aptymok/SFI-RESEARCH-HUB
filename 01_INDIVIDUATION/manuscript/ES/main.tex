@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\title{La individuación como problema de medición}
+\author{Información de autoría reservada en la rama de trabajo}
+\date{Manuscrito de trabajo --- 2026-08-19}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+La individuación suele tratarse como un problema ontológico o filosófico: qué hace que una entidad sea una entidad y no otra, y qué permite identificarla a través del cambio. Este artículo reformula una parte restringida de ese problema como una cuestión operacional de medición. Preguntamos si entidades candidatas pueden distinguirse mediante reglas explícitas de representación de estado, asignación de fronteras, persistencia y transición, sin presuponer una teoría metafísica de la identidad. La contribución es metodológica, no metafísica. Definimos una arquitectura de medición en la que una afirmación de individuación sólo es válida respecto de una escala de observación, una regla de frontera, un espacio de estados, un criterio de persistencia y un modelo nulo declarados. Derivamos pruebas falsables de robustez de frontera, persistencia temporal y sensibilidad a transiciones, e identificamos fallas donde la identidad aparente es inducida por instrumentación, segmentación o selección retrospectiva. El marco está diseñado para conservar sentido independientemente de cualquier teoría posterior de fricción sistémica.
+\end{abstract}
+
+\section{Introducción}
+Las preguntas de individuación aparecen siempre que un observador debe decidir qué cuenta como la misma entidad a través del tiempo, condiciones cambiantes o fronteras interactivas. En sistemas complejos, interacción humano--computadora, organización biológica e infraestructuras sociotécnicas, estas decisiones rara vez son neutrales: la elección de frontera, resolución temporal y representación de estado determina lo que después puede medirse.
+
+Este artículo aborda una pregunta más acotada que la metafísica de la identidad. Dado un proceso de observación, ¿bajo qué condiciones puede ponerse a prueba una afirmación de individuación en lugar de asumirla? Proponemos que la individuación puede tratarse como problema de medición cuando cinco elementos se declaran por adelantado: entidad candidata, escala de observación, regla de frontera, representación de estado y criterio de persistencia/transición.
+
+La afirmación central no es que la medición resuelva la identidad ontológica. Es que muchas afirmaciones científicas y de ingeniería acerca de ``el mismo sistema'', ``el mismo agente'' o ``el mismo objeto'' contienen supuestos operacionales de individuación que pueden hacerse explícitos, compararse y falsearse.
+
+\section{Formulación del problema}
+Sea $\Omega_t$ el campo observable en el tiempo $t$. Una entidad candidata $E$ es producida por un operador de frontera
+\[
+B_{\theta}: \Omega_t \rightarrow E_t,
+\]
+donde $\theta$ contiene parámetros observacionales y de segmentación declarados. Un mapa de estado
+\[
+S_{\phi}: E_t \rightarrow X_t
+\]
+representa la entidad en un espacio de estados elegido. Un procedimiento de individuación debe determinar si $E_t$ y $E_{t+\Delta}$ son tratados como la misma entidad operacional bajo una regla de persistencia $P$ y si las discontinuidades observadas constituyen cambio ordinario o transición de régimen/identidad.
+
+Definimos una especificación operacional de individuación como
+\[
+\mathcal{I}=\langle B_{\theta},S_{\phi},P_{\psi},T_{\eta},\mathcal{N}\rangle,
+\]
+donde $T_{\eta}$ es una regla de transición y $\mathcal{N}$ un conjunto de modelos nulos o alternativos.
+
+\section{Criterios de medición}
+Un procedimiento útil de individuación debe satisfacer al menos cuatro requisitos.
+
+\subsection{Robustez de frontera}
+Pequeñas perturbaciones admisibles de $B_{\theta}$ no deberían crear o destruir arbitrariamente afirmaciones de identidad. Si pequeños cambios de segmentación invierten la conclusión, la individuación es sensible al instrumento y debe reportarse como tal.
+
+\subsection{Persistencia temporal}
+La persistencia debe evaluarse sobre un intervalo declarado y no inferirse de similitudes aisladas. Una puntuación genérica de persistencia puede escribirse como
+\[
+P(E;t_0,t_1)=f\left(\{D(X_t,X_{t+\delta})\}_{t=t_0}^{t_1}\right),
+\]
+donde $D$ es una función de distancia de estado declarada y $f$ se especifica antes de inspeccionar los resultados.
+
+\subsection{Sensibilidad a transición}
+El procedimiento debe distinguir variación ordinaria dentro de una entidad de una transición declarada. Esto exige umbrales explícitos, criterios de cambio de punto o comparación de modelos en lugar de segmentación narrativa retrospectiva.
+
+\subsection{Comparación nula}
+La persistencia aparente debe compararse al menos con un modelo nulo o línea base plausible: segmentación aleatoria, orden temporal permutado, regiones no-entidad emparejadas o reglas de frontera alternativas, según el dominio.
+
+\section{Hipótesis primaria}
+La hipótesis registrada SFI-A-H01 sostiene que la individuación operacional puede estimarse a partir de relaciones persistentes de estado/frontera sin presuponer identidad metafísica.
+
+Su falsador es directo: si ninguna formulación declarada de frontera/persistencia discrimina entidades objetivo por encima del azar o de líneas base emparejadas en los casos especificados, la afirmación operacional falla para dichos casos.
+
+\section{Hipótesis adversariales}
+Consideramos cuatro alternativas: (1) la identidad aparente es principalmente un artefacto de segmentación; (2) la persistencia temporal se explica por autocorrelación; (3) las variables seleccionadas por el observador codifican la respuesta por construcción; y (4) múltiples reglas incompatibles de frontera funcionan igual de bien, dejando subdeterminada la individuación a la escala elegida.
+
+\section{Arquitectura experimental}
+El paquete empírico mínimo incluye entidades candidatas, reglas alternativas de frontera, mapas explícitos de estado, estimadores de persistencia, criterios de transición y modelos nulos. Deben retenerse los casos fallidos y ambiguos. Los resultados deben reportarse con análisis de sensibilidad a escala de observación y resolución temporal.
+
+\section{Límites de interpretación}
+Una individuación operacional exitosa no establece identidad metafísica. Establece que, bajo supuestos de medición declarados, una entidad candidata presenta continuidad o discontinuidad reproducible que supera alternativas especificadas. Inversamente, el fracaso del procedimiento no prueba que no exista entidad alguna; demuestra que la arquitectura de medición elegida no sustenta la afirmación.
+
+\section{Relación con trabajo posterior de SFI}
+Este marco es deliberadamente independiente de System Friction Theory. Trabajo posterior puede utilizar esta maquinaria para definir sistemas y transiciones, pero la validez del presente marco de medición no debe depender de que SFT sea correcta.
+
+\section{Conclusión}
+La individuación se vuelve científicamente tratable cuando sus compromisos operacionales se hacen explícitos. Al separar asignación de frontera, representación de estado, persistencia, criterios de transición y comparación nula, el problema pasa de supuesto implícito a arquitectura de medición falsable. El marco no resuelve la identidad en general; vuelve inspeccionable, reproducible y vulnerable a contraevidencia una clase de afirmaciones de identidad.
+
+\end{document}
