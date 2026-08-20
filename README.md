@@ -2,6 +2,13 @@
 
 Canonical research infrastructure for the System Friction Institute research program.
 
+**New reader:** start with [`START_HERE.md`](START_HERE.md).  
+**Current epistemic state:** see [`STATUS.md`](STATUS.md).  
+**Reproduce available engineering checks:** see [`REPRODUCE.md`](REPRODUCE.md).  
+**Hypotheses and falsifiers:** see [`00_REGISTRY/HYPOTHESIS_LEDGER.csv`](00_REGISTRY/HYPOTHESIS_LEDGER.csv).
+
+> This repository documents a research process. Presence in GitHub or Zenodo does not imply that a hypothesis or System Friction Theory has been empirically validated.
+
 ## Purpose
 
 This repository separates four layers that must not be collapsed:
@@ -17,8 +24,8 @@ A commit is not a release. A release is not automatically a DOI. A DOI is not ev
 
 | ID | Research object | Role | Current state |
 |---|---|---|---|
-| SFI-A | *Individuation as a Measurement Problem* | construct definition / measurement | drafting |
-| SFI-B | *From AI Governance to AI Observability* | external execution / observability | drafting |
+| SFI-A | *Individuation as a Measurement Problem* | construct definition / measurement | protocol designed; empirical test pending |
+| SFI-B | *From AI Governance to AI Observability* | external execution / observability | protocol designed; empirical test pending |
 | SFI-C0 | *System Friction Theory — Initial Falsifiable Specification* | prospective prediction layer | frozen candidate |
 | SFI-C1 | *System Friction Theory: Persistent Constraints, Multiscale Reorganization, and Pre-Emergent Information in Dynamical Systems* | theoretical synthesis | withheld |
 | SFI-CHI27 | CHI 2027 submission derivative | HCI venue-specific surface | candidate |
@@ -44,14 +51,19 @@ SFI-C0 exists to preserve prospective claims. It is **not** presented as validat
 ## Repository map
 
 ```text
+START_HERE.md                 orientation and epistemic labels
+STATUS.md                     current state matrix
 00_REGISTRY/                  research objects + hypothesis ledger
 01_INDIVIDUATION/             SFI-A
 02_AI_OBSERVABILITY/          SFI-B
 03_SYSTEM_FRICTION_THEORY/    SFI-C0 / later SFI-C1
 04_CHI_2027/                  anonymous review surface
 SHARED/                       schemas/templates shared across objects
+REPRODUCE.md                  reproducibility instructions
 GOVERNANCE.md                 epistemic/evidence rules
 RELEASES_AND_ZENODO.md        release + DOI policy
+CITATION.cff                  GitHub citation metadata
+.zenodo.json                  Zenodo release metadata
 ```
 
 ## Evidence principle
@@ -85,6 +97,10 @@ Do not commit secrets, credentials, confidential institutional material, unautho
 ## CHI review boundary
 
 The public canonical history and an anonymous review package are distinct surfaces. Reviewer-facing exports must be regenerated and checked against the venue's current anonymization policy before submission.
+
+## Citation and preservation
+
+GitHub uses `CITATION.cff` to expose citation guidance. Zenodo is configured to read `.zenodo.json` when a deliberate GitHub Release is created. The first intended archival object is a prospective hypothesis/falsification registry, not a claim of empirical validation.
 
 ## Status
 
