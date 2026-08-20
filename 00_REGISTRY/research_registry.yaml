@@ -1,0 +1,44 @@
+version: 0.1.0
+updated: 2026-08-19
+program: SFI Research Hub
+objects:
+  - id: SFI-A
+    slug: individuation
+    title_en: "Individuation as a Measurement Problem"
+    title_es: "La individuación como problema de medición"
+    state: drafting
+    role: construct_definition_and_measurement
+    intended_sequence: 1
+  - id: SFI-B
+    slug: ai-observability
+    title_en: "From AI Governance to AI Observability"
+    title_es: "De la gobernanza de IA a la observabilidad de IA"
+    state: drafting
+    role: external_execution_and_observability
+    intended_sequence: 2
+  - id: SFI-C0
+    slug: sft-frozen-spec
+    title_en: "System Friction Theory — Initial Falsifiable Specification"
+    title_es: "Teoría de Fricción Sistémica — Especificación falsable inicial"
+    state: frozen_candidate
+    role: preregistered_prediction_layer
+    intended_sequence: 0
+    publish_as_validated_theory: false
+  - id: SFI-C1
+    slug: system-friction-theory
+    title_en: "System Friction Theory: Persistent Constraints, Multiscale Reorganization, and Pre-Emergent Information in Dynamical Systems"
+    title_es: "Teoría de Fricción Sistémica: restricciones persistentes, reorganización multiescala e información pre-emergente en sistemas dinámicos"
+    state: withheld
+    role: theoretical_synthesis
+    intended_sequence: 3
+  - id: SFI-CHI27
+    slug: chi-2027
+    title_en: "CHI 2027 submission branch"
+    state: candidate
+    role: hci_venue_specific_derivative
+policies:
+  commit_is_release: false
+  release_is_doi: false
+  evidence_before_inference: true
+  post_hoc_changes_must_be_logged: true
+  chi_anonymous_export_required: true
