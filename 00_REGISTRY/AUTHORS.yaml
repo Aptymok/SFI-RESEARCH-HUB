@@ -1,0 +1,15 @@
+authors:
+  - id: JA_MARIN_LIERA
+    canonical_name: Juan Antonio Marin Liera
+    email: jmarin@systemfriction.org
+    affiliation: System Friction Institute
+    orcid: null
+  - id: EDWING_PEREDO_GUADARRAMA
+    canonical_name: Edwing Peredo Guadarrama
+    email: kxtxr@systemfriction.org
+    affiliation: System Friction Institute
+    orcid: null
+
+notes:
+  - ORCID remains unset until verified.
+  - CHI anonymous exports must remove names, emails, affiliation, and identifying repository links during review.
