@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\title{From AI Governance to AI Observability}
+\author{Author information withheld in working research branch}
+\date{Working manuscript --- 2026-08-19}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+AI governance frameworks specify responsibilities, controls, policies, and accountability structures, but governance completeness does not necessarily imply that the behavior of a human--AI system can be reconstructed after the fact. This paper distinguishes governance from observability. We define AI observability as the capacity to reconstruct, from declared evidence, the sequence linking system state, human or machine intervention, transition, and outcome. The contribution is an operational framework for measuring trace completeness, provenance continuity, temporal alignment, and reconstruction uncertainty. We propose falsifiable tests comparing governance-rich systems with and without explicit observability instrumentation. The framework treats missing, contradictory, or inaccessible traces as empirical outcomes rather than implementation defects to be hidden. It is deliberately independent of System Friction Theory so that its results can support, weaken, or contradict later theoretical claims.
+\end{abstract}
+
+\section{Introduction}
+The rapid institutionalization of AI governance has produced policies, risk registers, model documentation, approval procedures, audit controls, and accountability roles. These mechanisms answer important normative and organizational questions: who is responsible, what is permitted, what must be reviewed, and which controls should exist. They do not automatically answer a different operational question: can an observer reconstruct what happened in a human--AI system when a consequential transition occurs?
+
+We call this second property \emph{AI observability}. Observability is not used here as a synonym for monitoring or compliance. It denotes the degree to which a declared evidence system permits reconstruction of a causal-temporal trace linking state, intervention, transition, and outcome.
+
+\section{Governance and observability}
+Let $G$ denote a vector of governance controls and $O$ an observability representation. A system may have a high value of governance completeness while still failing to provide the evidence needed to reconstruct an event. The null assumption that motivates this paper is therefore
+\[
+G \not\Rightarrow O.
+\]
+
+For an event $e$, define the target trace
+\[
+\tau_e = \langle X_{t_0},U_{t_1},\Delta X_{t_2},Y_{t_3}\rangle,
+\]
+where $X$ is system state, $U$ an intervention, $\Delta X$ a transition, and $Y$ an outcome. A reconstruction procedure returns $\hat{\tau}_e$ together with uncertainty and provenance.
+
+\section{Observability dimensions}
+We propose four minimum dimensions.
+
+\subsection{Trace completeness}
+The fraction of required trace elements that can be reconstructed from admissible evidence.
+
+\subsection{Provenance continuity}
+The degree to which each reconstructed element can be linked to an identifiable source, transformation, and timestamp without unexplained gaps.
+
+\subsection{Temporal alignment}
+The degree to which evidence sources can be placed on a common or explicitly transformed time axis.
+
+\subsection{Reconstruction uncertainty}
+A declared measure of ambiguity in the reconstructed trace, including competing explanations where evidence does not uniquely determine sequence or attribution.
+
+\section{Primary hypothesis}
+SFI-B-H01 states that governance completeness does not imply observability of state transitions in human--AI systems.
+
+The hypothesis is weakened or falsified if systems with governance controls consistently permit accurate reconstruction of state/intervention/transition/outcome traces without additional observability instrumentation, across the preregistered cases and uncertainty criteria.
+
+\section{Adversarial alternatives}
+We test at least four alternatives: (1) governance artifacts already contain sufficient trace evidence and the proposed observability layer is redundant; (2) reconstruction gains arise only because more data are collected, not because of provenance structure; (3) apparent improvements reflect researcher familiarity with the instrumented system; and (4) temporal alignment choices determine the result.
+
+\section{Evaluation design}
+A minimum evaluation compares matched cases or scenarios under two conditions: governance controls alone and governance controls plus explicit observability instrumentation. The evaluation must define the target trace in advance, score reconstruction completeness and uncertainty, and retain cases where the system cannot be reconstructed. Where real operational data are restricted, synthetic or consented cases can test the instrumentation while preserving the distinction between public method evidence and inaccessible domain data.
+
+\section{Failure as evidence}
+An observability system is not validated by producing a coherent narrative for every case. Missing sources, contradictory timestamps, ambiguous attribution, or non-reconstructable transitions are scientifically informative. They identify the limits of the evidence plane and should lower observability rather than be repaired retrospectively through undocumented assumptions.
+
+\section{Human--AI relevance}
+Human--AI systems introduce distinctive reconstruction problems because system state may depend jointly on model outputs, interface state, human interpretation, overrides, external data, and organizational procedure. Observability therefore concerns the coupled system rather than the model in isolation.
+
+\section{Relation to governance}
+Governance and observability are complementary. Governance specifies what should happen and who is accountable; observability supplies evidence about what can be reconstructed as having happened. A governance program may require observability, but the existence of the former should not be treated as empirical evidence of the latter.
+
+\section{Relation to later SFI work}
+This paper does not require System Friction Theory. If later analyses interpret persistent reconstruction gaps or transition costs through SFT, those interpretations must be separate from the present measurement results.
+
+\section{Conclusion}
+AI governance and AI observability solve different problems. By treating reconstruction capacity as a measurable property of the evidence system, institutions can distinguish procedural completeness from empirical traceability. The proposed framework makes that distinction testable and preserves non-reconstructability as an explicit result rather than an unreported failure.
+
+\end{document}
