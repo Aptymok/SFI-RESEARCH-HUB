@@ -1,0 +1,33 @@
+{
+  "title": "SFI Research Hub: Prospective Hypothesis and Falsification Registry",
+  "upload_type": "software",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Marin Liera, Juan Antonio",
+      "affiliation": "System Friction Institute"
+    },
+    {
+      "name": "Peredo Guadarrama, Edwing",
+      "affiliation": "System Friction Institute"
+    }
+  ],
+  "description": "Governed research compendium for the System Friction Institute. The initial release records prospective hypotheses, counter-hypotheses, falsification criteria, research protocols, reproducible synthetic engineering benchmarks, bilingual working manuscripts, and a candidate System Friction Theory specification. The archive does not claim empirical validation of SFT; it is intended to preserve what was specified before eligible empirical evaluation.",
+  "keywords": [
+    "system friction",
+    "operational individuation",
+    "AI observability",
+    "human-AI systems",
+    "complex systems",
+    "falsification",
+    "open science",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Aptymok/SFI-RESEARCH-HUB",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
