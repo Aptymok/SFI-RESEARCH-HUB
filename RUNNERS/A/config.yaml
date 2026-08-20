@@ -1,0 +1,33 @@
+experiment_id: A-EMP-001
+dataset_name: Fluo-N2DL-HeLa
+source_url: https://data.celltrackingchallenge.net/training-datasets/Fluo-N2DL-HeLa.zip
+source_page: https://celltrackingchallenge.net/2d-datasets/
+permission_required_for_public_non_ctc_scientific_use: true
+permission_receipt_path: local_permissions/CTC_PERMISSION_GRANTED.txt
+local_archive_path: local_data/Fluo-N2DL-HeLa.zip
+local_extract_path: local_data/Fluo-N2DL-HeLa
+provenance_manifest_path: local_data/Fluo-N2DL-HeLa.provenance.json
+seed: 20260820
+split_policy:
+  mode: sequence_holdout
+  development_sequence: "01"
+  heldout_sequence: "02"
+analysis:
+  primary_claim: "Persistence/history adds out-of-sample information for operational individuation beyond instantaneous similarity baselines."
+  primary_metric: tracking_reconstruction_accuracy
+  baselines:
+    - instantaneous_similarity
+    - nearest_state_match
+    - static_boundary
+  adversarial_checks:
+    - time_permutation
+    - threshold_sensitivity
+    - history_ablation
+    - matched_complexity_baseline
+result_states:
+  - NOT_EXECUTED
+  - BLOCKED_PERMISSION
+  - DATA_VALIDATED
+  - H01_SURVIVED_DOMAIN
+  - H01_NOT_SUPPORTED_DOMAIN
+  - INCONCLUSIVE
