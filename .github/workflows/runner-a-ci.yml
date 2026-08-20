@@ -1,0 +1,22 @@
+name: runner-a-ci
+
+on:
+  push:
+    paths:
+      - 'RUNNERS/A/**'
+      - '.github/workflows/runner-a-ci.yml'
+  pull_request:
+    paths:
+      - 'RUNNERS/A/**'
+      - '.github/workflows/runner-a-ci.yml'
+
+jobs:
+  test-linking:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - run: python RUNNERS/A/test_linking.py
