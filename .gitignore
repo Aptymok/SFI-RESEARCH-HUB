@@ -36,6 +36,8 @@ venv/
 !**/data/raw/README.md
 **/data/restricted/*
 !**/data/restricted/README.md
+local_data/
+local_permissions/
 
 # Generated anonymous review packages
 04_CHI_2027/anonymous_export/*.zip
