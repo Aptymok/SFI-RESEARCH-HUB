@@ -1,0 +1,78 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\title{Individuation as a Measurement Problem}
+\author{Author information withheld in working research branch}
+\date{Working manuscript --- 2026-08-19}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Individuation is often treated as an ontological or philosophical problem: what makes an entity one entity rather than another, and what allows that entity to remain identifiable through change? This paper reformulates a restricted part of that problem as an operational measurement question. We ask whether candidate entities can be distinguished through explicit rules for state representation, boundary assignment, persistence, and transition without presupposing a metaphysical account of identity. The contribution is methodological rather than metaphysical. We define a measurement architecture in which an individuation claim is valid only relative to a declared observation scale, boundary rule, state space, persistence criterion, and null model. We derive falsifiable tests for boundary robustness, temporal persistence, and transition sensitivity, and identify failure modes in which apparent identity is induced by instrumentation, segmentation, or retrospective selection. The framework is designed to remain meaningful independently of any later theory of system friction.
+\end{abstract}
+
+\section{Introduction}
+Questions of individuation appear wherever an observer must decide what counts as the same entity across time, changing conditions, or interacting boundaries. In complex systems, human--computer interaction, biological organization, and sociotechnical infrastructures, these decisions are rarely neutral: the choice of boundary, temporal resolution, and state representation determines what can subsequently be measured.
+
+This paper addresses a narrower question than the metaphysics of identity. Given an observation process, under what conditions can an individuation claim be operationally tested rather than assumed? We propose that individuation can be treated as a measurement problem when five elements are declared in advance: a candidate entity, an observation scale, a boundary rule, a state representation, and a persistence/transition criterion.
+
+The central claim is not that measurement resolves ontological identity. It is that many scientific and engineering claims about ``the same system,'' ``the same agent,'' or ``the same object'' implicitly contain operational individuation assumptions that can be exposed, compared, and falsified.
+
+\section{Problem formulation}
+Let $\Omega_t$ denote the observable field at time $t$. A candidate entity $E$ is produced by a boundary operator
+\[
+B_{\theta}: \Omega_t \rightarrow E_t,
+\]
+where $\theta$ contains declared observational and segmentation parameters. A state map
+\[
+S_{\phi}: E_t \rightarrow X_t
+\]
+represents the entity in a chosen state space. An individuation procedure must then determine whether $E_t$ and $E_{t+\Delta}$ are treated as the same operational entity under a persistence rule $P$ and whether observed discontinuities constitute ordinary state change or a regime/identity transition.
+
+We therefore define an operational individuation specification as
+\[
+\mathcal{I}=\langle B_{\theta},S_{\phi},P_{\psi},T_{\eta},\mathcal{N}\rangle,
+\]
+where $T_{\eta}$ is a transition rule and $\mathcal{N}$ is a set of null or alternative models.
+
+\section{Measurement criteria}
+A useful individuation procedure should satisfy at least four requirements.
+
+\subsection{Boundary robustness}
+Small admissible perturbations of $B_{\theta}$ should not arbitrarily create or destroy identity claims. If small changes in segmentation reverse the conclusion, the individuation claim is instrument-sensitive and must be reported as such.
+
+\subsection{Temporal persistence}
+Persistence must be evaluated over a declared interval rather than inferred from isolated similarity. A generic persistence score can be written as
+\[
+P(E;t_0,t_1)=f\left(\{D(X_t,X_{t+\delta})\}_{t=t_0}^{t_1}\right),
+\]
+where $D$ is a declared state-distance function and $f$ is specified before outcome inspection.
+
+\subsection{Transition sensitivity}
+The procedure should distinguish ordinary variation within an entity from a declared transition. This requires explicit thresholds, change-point criteria, or model comparison rather than retrospective narrative segmentation.
+
+\subsection{Null comparison}
+Apparent persistence must be compared with at least one plausible null or baseline: random segmentation, shuffled temporal order, matched non-entity regions, or alternative boundary rules, depending on domain.
+
+\section{Primary hypothesis}
+The preregistered research-hub hypothesis SFI-A-H01 states that operational individuation can be estimated from persistent state/boundary relations without presupposing metaphysical identity.
+
+A falsifier is straightforward: if no declared boundary/persistence formulation discriminates target entities above chance or matched baselines across specified test cases, the operational claim fails for those cases.
+
+\section{Adversarial hypotheses}
+We consider four alternatives: (1) apparent identity is primarily a segmentation artifact; (2) temporal persistence is explainable by autocorrelation alone; (3) observer-selected features encode the answer by construction; and (4) multiple incompatible boundary rules perform equally well, making individuation underdetermined at the chosen scale.
+
+\section{Experimental architecture}
+The minimum empirical package consists of candidate entities, alternative boundary rules, explicit state maps, persistence estimators, transition criteria, and null models. Analyses must retain failed and ambiguous cases. Results should be reported with sensitivity to observation scale and temporal resolution.
+
+\section{Interpretation limits}
+Successful operational individuation does not establish metaphysical identity. It establishes that, under declared measurement assumptions, a candidate entity exhibits reproducible continuity or discontinuity that exceeds specified alternatives. Conversely, failure of the procedure does not prove that no entity exists; it demonstrates that the chosen measurement architecture does not support the claim.
+
+\section{Relation to later SFI work}
+This framework is intentionally independent of System Friction Theory. Later work may use the individuation machinery to define systems and transitions, but the validity of the present measurement framework must not depend on SFT being correct.
+
+\section{Conclusion}
+Individuation becomes scientifically tractable when its operational commitments are exposed. By separating boundary assignment, state representation, persistence, transition criteria, and null comparison, the problem shifts from an implicit assumption to a falsifiable measurement architecture. The resulting framework does not solve identity in general; it makes a class of identity claims inspectable, reproducible, and vulnerable to counterevidence.
+
+\end{document}
