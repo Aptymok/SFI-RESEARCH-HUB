@@ -1,8 +1,9 @@
 # SFT-0.1 — Initial Falsifiable Specification
 
-Status: **frozen candidate, not validated theory**  
+Status: **FROZEN PROSPECTIVE SPECIFICATION — not validated theory**  
 Registered: 2026-08-19  
-Purpose: preserve prospective claims before further evidence is examined.
+Frozen by investigator decision: 2026-08-20  
+Purpose: preserve prospective claims before eligible empirical evidence is examined.
 
 ## Scope
 
@@ -25,7 +26,6 @@ This definition intentionally does **not** fix a final estimator. Competing esti
 After controlling for an explicitly defined instantaneous state difference \(D(X_t,X_{t+\Delta})\), measures of constraint persistence/history improve out-of-sample prediction or explanation of transition cost.
 
 ### Falsifier
-
 Across preregistered domains and models, persistence/history terms provide no reproducible incremental value over matched baselines once instantaneous state difference and declared confounds are controlled.
 
 ## H2 — Pre-emergent structure
@@ -33,7 +33,6 @@ Across preregistered domains and models, persistence/history terms provide no re
 Before some regime transitions, structured persistence in constraints contains reproducible information about the future transition relative to matched null/baseline processes.
 
 ### Falsifier
-
 No preregistered pre-transition statistic discriminates future transition windows from matched non-transition/null windows out of sample beyond declared uncertainty thresholds.
 
 ## H3 — Multiscale non-equivalence
@@ -41,20 +40,16 @@ No preregistered pre-transition statistic discriminates future transition window
 System friction is not generally invariant under arbitrary aggregation. At least some transitions exhibit materially different constraint/cost structure when measured at different declared scales.
 
 ### Falsifier
-
 Across preregistered tests, scale changes do not alter predictive/explanatory structure beyond sampling or measurement error, or all apparent scale effects are attributable to known aggregation artifacts.
 
 ## Counter-hypotheses to test
-
 - **CH1 — State-distance sufficiency:** transition cost is fully explained by instantaneous state displacement plus ordinary noise/confounds; persistence contributes nothing.
 - **CH2 — Retrospective patterning:** apparent pre-emergent information is a look-ahead, selection, segmentation, or multiple-testing artifact.
 - **CH3 — Generic complexity relabeling:** SFT adds no distinct explanatory or predictive content beyond established constructs such as hysteresis, switching costs, energy barriers, path dependence, resilience, or control effort.
 - **CH4 — Instrument artifact:** measured friction is primarily induced by the chosen instrumentation, boundary rule, or temporal resolution.
 
 ## Evidence that does not by itself support SFT
-
 The following are insufficient alone:
-
 - a visually compelling transition;
 - a post-hoc fit to one case;
 - high correlation without prospective prediction or discriminant comparison;
@@ -64,9 +59,7 @@ The following are insufficient alone:
 - institutional adoption or citation count.
 
 ## Minimum survival criteria for SFT-1
-
 Before promotion to a consolidated theoretical manuscript, the program should demonstrate:
-
 1. operationally independent constructs;
 2. at least one prospective or preregistered prediction;
 3. explicit comparison with strong counter-hypotheses and adjacent established theories;
@@ -77,5 +70,7 @@ Before promotion to a consolidated theoretical manuscript, the program should de
 8. reproducible lineage from data to claims.
 
 ## Freeze rule
-
 Substantive changes to H1–H3 or their falsifiers after relevant evidence is known must create a new specification version. This file must not be silently rewritten to accommodate results.
+
+Any proposed modification now follows:
+`SFT-0.1 FROZEN -> CHALLENGED -> SFT-0.2 candidate`, preserving SFT-0.1 unchanged in the archival record.
