@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,hyperref}
+\title{De la gobernanza de IA a la observabilidad de IA}
+\author{Información de autoría reservada en la rama de trabajo}
+\date{Manuscrito de trabajo --- 2026-08-19}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Los marcos de gobernanza de inteligencia artificial especifican responsabilidades, controles, políticas y estructuras de rendición de cuentas, pero la completitud de gobernanza no implica necesariamente que el comportamiento de un sistema humano--IA pueda reconstruirse después de ocurrido. Este artículo distingue gobernanza de observabilidad. Definimos observabilidad de IA como la capacidad de reconstruir, a partir de evidencia declarada, la secuencia que vincula estado del sistema, intervención humana o maquínica, transición y resultado. La contribución es un marco operacional para medir completitud de traza, continuidad de procedencia, alineación temporal e incertidumbre de reconstrucción. Proponemos pruebas falsables que comparan sistemas ricos en gobernanza con y sin instrumentación explícita de observabilidad. El marco trata trazas ausentes, contradictorias o inaccesibles como resultados empíricos y no como defectos que deban ocultarse. Se mantiene deliberadamente independiente de System Friction Theory para que sus resultados puedan apoyarla, debilitarla o contradecirla posteriormente.
+\end{abstract}
+
+\section{Introducción}
+La institucionalización acelerada de la gobernanza de IA ha producido políticas, registros de riesgo, documentación de modelos, procedimientos de aprobación, controles de auditoría y roles de responsabilidad. Estos mecanismos responden preguntas normativas y organizacionales importantes: quién responde, qué está permitido, qué debe revisarse y qué controles deben existir. No responden automáticamente una pregunta operacional distinta: ¿puede un observador reconstruir qué ocurrió en un sistema humano--IA cuando sucede una transición relevante?
+
+Denominamos a esta segunda propiedad \emph{observabilidad de IA}. Aquí observabilidad no es sinónimo de monitoreo ni cumplimiento. Denota el grado en que un sistema de evidencia declarado permite reconstruir una traza causal-temporal que vincula estado, intervención, transición y resultado.
+
+\section{Gobernanza y observabilidad}
+Sea $G$ un vector de controles de gobernanza y $O$ una representación de observabilidad. Un sistema puede tener alta completitud de gobernanza y aun así carecer de la evidencia necesaria para reconstruir un evento. La hipótesis nula que motiva este trabajo es
+\[
+G \not\Rightarrow O.
+\]
+
+Para un evento $e$, definimos la traza objetivo
+\[
+\tau_e = \langle X_{t_0},U_{t_1},\Delta X_{t_2},Y_{t_3}\rangle,
+\]
+donde $X$ es estado del sistema, $U$ una intervención, $\Delta X$ una transición y $Y$ un resultado. Un procedimiento de reconstrucción devuelve $\hat{\tau}_e$ junto con incertidumbre y procedencia.
+
+\section{Dimensiones de observabilidad}
+Proponemos cuatro dimensiones mínimas.
+
+\subsection{Completitud de traza}
+La fracción de elementos requeridos de la traza que pueden reconstruirse a partir de evidencia admisible.
+
+\subsection{Continuidad de procedencia}
+El grado en que cada elemento reconstruido puede vincularse con una fuente, transformación y marca temporal identificables, sin vacíos no explicados.
+
+\subsection{Alineación temporal}
+El grado en que las fuentes de evidencia pueden colocarse sobre un eje temporal común o transformado de manera explícita.
+
+\subsection{Incertidumbre de reconstrucción}
+Una medida declarada de ambigüedad en la traza reconstruida, incluyendo explicaciones competidoras cuando la evidencia no determina de forma única la secuencia o la atribución.
+
+\section{Hipótesis primaria}
+SFI-B-H01 sostiene que la completitud de gobernanza no implica observabilidad de transiciones de estado en sistemas humano--IA.
+
+La hipótesis se debilita o se falsa si sistemas con controles de gobernanza permiten de manera consistente reconstruir con precisión trazas estado/intervención/transición/resultado sin instrumentación adicional de observabilidad, a través de los casos preregistrados y bajo los criterios de incertidumbre declarados.
+
+\section{Alternativas adversariales}
+Se probarán al menos cuatro alternativas: (1) los artefactos de gobernanza ya contienen evidencia suficiente y la capa de observabilidad es redundante; (2) las mejoras de reconstrucción provienen sólo de recolectar más datos y no de la estructura de procedencia; (3) la mejora aparente refleja familiaridad del investigador con el sistema instrumentado; y (4) las decisiones de alineación temporal determinan el resultado.
+
+\section{Diseño de evaluación}
+Una evaluación mínima compara casos o escenarios equivalentes bajo dos condiciones: controles de gobernanza únicamente y controles de gobernanza más instrumentación explícita de observabilidad. Debe definirse previamente la traza objetivo, puntuarse completitud e incertidumbre y conservarse los casos donde el sistema no puede reconstruirse. Cuando los datos operacionales reales estén restringidos, casos sintéticos o consentidos pueden evaluar la instrumentación preservando la separación entre evidencia metodológica pública y datos de dominio no accesibles.
+
+\section{La falla como evidencia}
+Un sistema de observabilidad no se valida produciendo una narrativa coherente para cada caso. Fuentes ausentes, marcas temporales contradictorias, atribución ambigua o transiciones no reconstruibles son científicamente informativas. Identifican límites del plano de evidencia y deben disminuir la observabilidad en lugar de repararse retrospectivamente mediante supuestos no documentados.
+
+\section{Relevancia humano--IA}
+Los sistemas humano--IA introducen problemas de reconstrucción particulares porque el estado del sistema puede depender conjuntamente de salidas del modelo, estado de interfaz, interpretación humana, anulaciones, datos externos y procedimiento organizacional. Por ello, la observabilidad concierne al sistema acoplado y no al modelo de manera aislada.
+
+\section{Relación con gobernanza}
+Gobernanza y observabilidad son complementarias. La gobernanza especifica qué debería ocurrir y quién responde; la observabilidad aporta evidencia acerca de lo que puede reconstruirse como ocurrido. Un programa de gobernanza puede requerir observabilidad, pero la existencia del primero no debe tratarse como evidencia empírica de la segunda.
+
+\section{Relación con trabajo posterior de SFI}
+Este artículo no requiere System Friction Theory. Si análisis posteriores interpretan vacíos persistentes de reconstrucción o costes de transición mediante SFT, esas interpretaciones deben separarse de los resultados de medición presentes.
+
+\section{Conclusión}
+La gobernanza de IA y la observabilidad de IA resuelven problemas distintos. Al tratar la capacidad de reconstrucción como propiedad medible del sistema de evidencia, una institución puede distinguir completitud procedimental de trazabilidad empírica. El marco propuesto vuelve esa distinción falsable y conserva la no-reconstrucción como resultado explícito, no como falla omitida.
+
+\end{document}
