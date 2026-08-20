@@ -1,0 +1,58 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: SFI Research Object Manifest
+type: object
+required:
+  - object_id
+  - version
+  - epistemic_state
+  - generated_at
+  - hypothesis_ids
+  - artifacts
+properties:
+  object_id:
+    type: string
+  version:
+    type: string
+  epistemic_state:
+    enum: [proposed, registered, observed, derived, inferred, contested, refuted, withheld]
+  generated_at:
+    type: string
+    format: date-time
+  hypothesis_ids:
+    type: array
+    items: {type: string}
+  protocol_ids:
+    type: array
+    items: {type: string}
+  data_sources:
+    type: array
+    items:
+      type: object
+      required: [id, access_state]
+      properties:
+        id: {type: string}
+        access_state:
+          enum: [public, restricted, confidential, synthetic, unavailable]
+        checksum: {type: [string, "null"]}
+        provenance: {type: string}
+  artifacts:
+    type: array
+    items:
+      type: object
+      required: [path, role]
+      properties:
+        path: {type: string}
+        role: {type: string}
+        checksum: {type: [string, "null"]}
+  claims:
+    type: array
+    items:
+      type: object
+      required: [claim_id, statement, epistemic_state]
+      properties:
+        claim_id: {type: string}
+        statement: {type: string}
+        epistemic_state:
+          enum: [proposed, registered, observed, derived, inferred, contested, refuted, withheld]
+        supports: {type: array, items: {type: string}}
+        contradicts: {type: array, items: {type: string}}
