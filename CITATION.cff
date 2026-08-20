@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this research compendium, cite the archived release corresponding to the exact version used."
+title: "SFI Research Hub"
+type: software
+authors:
+  - family-names: "Marin Liera"
+    given-names: "Juan Antonio"
+    email: "jmarin@systemfriction.org"
+    affiliation: "System Friction Institute"
+  - family-names: "Peredo Guadarrama"
+    given-names: "Edwing"
+    email: "kxtxr@systemfriction.org"
+    affiliation: "System Friction Institute"
+repository-code: "https://github.com/Aptymok/SFI-RESEARCH-HUB"
+url: "https://github.com/Aptymok/SFI-RESEARCH-HUB"
+keywords:
+  - system friction
+  - operational individuation
+  - AI observability
+  - falsification
+  - reproducible research
+  - human-AI systems
+  - complex systems
