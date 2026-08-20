@@ -1,0 +1,49 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: SFI LLM Change Proposal
+required:
+  - proposal_id
+  - proposer
+  - base_commit_sha
+  - research_object
+  - proposed_change
+  - hypothesis
+  - counter_hypothesis
+  - falsifier
+  - attractor_alignment
+  - recommended_action
+properties:
+  proposal_id: {type: string}
+  proposer:
+    type: string
+    enum: [JUAN_LLM, EDWING_LLM, EXTERNAL_LLM]
+  base_commit_sha: {type: string}
+  research_object: {type: string}
+  affected_hypothesis_ids:
+    type: array
+    items: {type: string}
+  observation_or_evidence: {type: string}
+  proposed_change: {type: string}
+  hypothesis: {type: string}
+  counter_hypothesis: {type: string}
+  falsifier: {type: string}
+  expected_information_gain:
+    type: number
+    minimum: 0
+    maximum: 100
+  reversibility:
+    type: string
+    enum: [high, medium, low, irreversible]
+  attractor_alignment:
+    type: number
+    minimum: 0
+    maximum: 100
+  estimated_execution_cost:
+    type: number
+    minimum: 0
+    maximum: 100
+  conflicts_with_frozen_object: {type: boolean}
+  recommended_action:
+    type: string
+    enum: [accept, experiment, quarantine, reject]
+  notes: {type: string}
+additionalProperties: false
