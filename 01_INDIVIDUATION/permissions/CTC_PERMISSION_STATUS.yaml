@@ -1,0 +1,16 @@
+request_id: A-EMP-001-CTC-PERMISSION
+status: REQUEST_SENT
+sent_at: 2026-08-20T14:25:00-06:00
+requester:
+  name: Juan Antonio Marin Liera
+  affiliation: System Friction Institute
+  email: jmarin@systemfriction.org
+dataset: Fluo-N2DL-HeLa
+purpose: scientific use outside direct Cell Tracking Challenge participation
+execution_gate:
+  acquisition_allowed: false
+  unblock_condition: explicit permission from CTC organizers
+notes:
+  - Request reported sent by requester.
+  - No assumption of approval is made.
+  - Raw CTC data and annotations remain excluded from GitHub.
