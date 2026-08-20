@@ -1,0 +1,41 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets / local env
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# Python / notebooks
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Data boundaries: raw operational data are opt-in, never accidental
+**/data/raw/*
+!**/data/raw/README.md
+**/data/restricted/*
+!**/data/restricted/README.md
+
+# Generated anonymous review packages
+04_CHI_2027/anonymous_export/*.zip
