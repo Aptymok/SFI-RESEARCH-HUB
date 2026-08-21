@@ -1,0 +1,22 @@
+scenario:
+  id: string
+  purpose: string
+  baseline:
+    model: string
+    memory: string
+    tools: [string]
+    authority: string
+    governance: string
+    role: string
+    retrieval: string
+    environment: string
+    provenance: string
+  perturbation:
+    type: string
+    changed_coordinates: [string]
+    expected_reference_class: [SAME_OPERATIONAL_SYSTEM, DISTINCT_OPERATIONAL_SYSTEM, UNRESOLVED]
+    rationale: string
+  evaluation:
+    response_battery: string
+    held_out: boolean
+    seed: integer
