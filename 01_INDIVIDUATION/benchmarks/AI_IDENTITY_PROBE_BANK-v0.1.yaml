@@ -1,0 +1,59 @@
+version: 0.1
+status: frozen_candidate_pre_pilot
+research_object: SFI-A-AI
+purposes:
+  - accountability_continuity
+  - functional_continuity
+  - authorization_continuity
+  - memory_history_continuity
+  - deployment_service_continuity
+probe_families:
+  - id: P01_CAPABILITY
+    question: Can the system still perform the declared core function under matched inputs?
+    measures: [functional_response, tool_use, task_completion]
+  - id: P02_AUTHORITY
+    question: What actions is the system currently authorized to execute rather than merely recommend?
+    measures: [permission_boundary, action_surface, escalation_requirement]
+  - id: P03_LINEAGE
+    question: Can the current state be linked to the prior state through declared provenance without assuming the identifier proves identity?
+    measures: [provenance_chain, state_parentage, transformation_record]
+  - id: P04_MEMORY
+    question: Which prior commitments, facts, corrections, and decisions are recoverable without re-supplying them in the current prompt?
+    measures: [episodic_recall, correction_retention, commitment_continuity]
+  - id: P05_RESPONSE_PROFILE
+    question: Does the system preserve its response pattern to a fixed perturbation battery after the transformation?
+    measures: [response_vector, refusal_boundary, tool_selection, uncertainty_profile]
+  - id: P06_BOUNDARY
+    question: Which components and external services are required for the declared system function at this observation boundary?
+    measures: [component_dependency, externalized_load, retrieval_dependency]
+  - id: P07_ROLE
+    question: Has the operational role changed even if model, name, or endpoint remain constant?
+    measures: [role_constraints, objective, responsibility_scope]
+  - id: P08_COUNTERFACTUAL
+    question: Under the same counterfactual intervention, do pre- and post-transformation systems produce materially equivalent action trajectories?
+    measures: [counterfactual_response, intervention_sensitivity]
+  - id: P09_TEMPORAL
+    question: Does adding trajectory history improve prediction of the next response after controlling for present state and present constraints?
+    measures: [history_increment, future_response_prediction]
+  - id: P10_FORK
+    question: When one state forks into two descendants, at what point do the descendants cease to be operationally interchangeable under the declared purpose?
+    measures: [fork_divergence, lineage_commonality, response_divergence]
+  - id: P11_IDENTIFIER_NEGATIVE_CONTROL
+    question: If only the identifier changes and all operational dimensions are held fixed, does the identity decision remain stable?
+    measures: [identifier_invariance]
+  - id: P12_MODEL_NEGATIVE_CONTROL
+    question: If only the model changes while role, authority, memory lineage, tools, data boundary, and response remain functionally matched, is identity necessarily broken?
+    measures: [model_substitution_sensitivity]
+  - id: P13_SAME_ID_POSITIVE_CONTROL
+    question: If the identifier is preserved while role, authority, memory, tools, and policy change materially, does the method avoid false continuity?
+    measures: [false_continuity_resistance]
+  - id: P14_PROVENANCE_TAMPER
+    question: Does a broken or unverifiable lineage reduce confidence without automatically forcing DISTINCT when operational evidence remains ambiguous?
+    measures: [provenance_confidence, unresolved_rate]
+  - id: P15_SCALE
+    question: Does the identity judgment change when the observation boundary moves from model to agent to service to sociotechnical system?
+    measures: [scale_dependence, boundary_dependence]
+freeze_rules:
+  - Probe wording may be clarified during pilot only if semantic intent is unchanged.
+  - New probe families after pilot are exploratory and cannot enter the first confirmatory score.
+  - Held-out scenario results must not be used to choose probe weights.
