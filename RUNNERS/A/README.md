@@ -1,9 +1,16 @@
-# A-EMP-001 Autonomous Runner
+# A-TRANSFER-BIO Runner — Cell lineage transfer benchmark
 
-Purpose: execute the first empirical falsification test for SFI-A without manual result steering.
+Status: retained / reclassified by ADR-004.
+
+This runner was initially built while SFI-A was temporarily narrowed toward biological cell tracking. That narrowing has been corrected. The runner is preserved as an external transfer/falsification domain, not as the primary empirical object of SFI-A.
+
+## Scientific role
+The runner asks whether continuity variables used by the SFI-A operational individuation framework retain reconstructive value in a biological lineage domain with independent reference annotations.
+
+It does **not** define the canonical SFI-A problem, and success here does not validate a universal individuation metric or System Friction Theory.
 
 ## Human gate
-The only required pre-execution human action is obtaining/recording the lawful permission basis for public non-CTC scientific use of Fluo-N2DL-HeLa. The raw dataset and permission receipt remain local and are ignored by Git.
+The required pre-execution human action is obtaining/recording the lawful permission basis for public non-CTC scientific use of Fluo-N2DL-HeLa. The raw dataset and permission receipt remain local and are ignored by Git.
 
 ## Setup
 ```bash
@@ -16,32 +23,23 @@ pip install -r RUNNERS/A/requirements.txt
 Place the real permission record locally at:
 `local_permissions/CTC_PERMISSION_GRANTED.txt`
 
-The record should contain date, granting party/contact, permitted scope, and a reference to the original authorization (do not commit confidential correspondence).
-
 ## Execute
 ```bash
 python RUNNERS/A/run.py
 ```
 
-The runner then:
+The runner:
 1. verifies the permission gate;
 2. downloads the official CTC training archive if absent;
 3. computes SHA-256 and provenance metadata;
 4. discovers image and imperfect-segmentation sequences;
-5. predicts links using an instantaneous baseline and a history/persistence model;
-6. loads gold tracking masks only in the evaluation stage;
-7. evaluates sequence 01 as development and sequence 02 as held-out;
-8. writes local results to `local_results/A-EMP-001/`;
-9. returns one of: `H01_SURVIVED_DOMAIN`, `H01_NOT_SUPPORTED_DOMAIN`, `INCONCLUSIVE`.
+5. predicts links using instantaneous and history/persistence variants;
+6. loads gold tracking masks only in evaluation;
+7. evaluates development and held-out sequences;
+8. writes local results;
+9. returns a domain-bounded support state.
 
-## Scientific boundary
-A positive held-out result means only that SFI-A-H01 survived this domain under this implementation. A null/negative result must remain visible. Neither result validates or falsifies SFT by itself.
+## Interpretation boundary
+A positive result means only that the tested continuity variables survived this external biological transfer domain under the declared implementation. A negative result constrains transfer claims. Neither result validates or falsifies SFT by itself.
 
-## Next hardening before confirmatory publication
-- lock exact archive hash after acquisition;
-- review the split against CTC sequence characteristics;
-- add division-event-aware metrics;
-- run time-permutation and matched-complexity controls;
-- bootstrap confidence intervals;
-- independently review feature/metric definitions;
-- preserve the pre-analysis commit before final held-out execution.
+See `00_REGISTRY/ADR-004_RESTORE_SFI_A_SCOPE.md`.
