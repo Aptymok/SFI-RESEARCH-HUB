@@ -1,0 +1,21 @@
+case_id,base_id,changed_axes,identifier_same,model_same,memory_same,tools_same,authority_same,policy_same,retrieval_same,runtime_same,role_same,provenance_same,expected_difficulty,notes
+A001,BASE01,none,1,1,1,1,1,1,1,1,1,1,low,Exact repeat control
+A002,BASE01,identifier,0,1,1,1,1,1,1,1,1,0,medium,Identifier rotation with operational continuity
+A003,BASE01,model,1,0,1,1,1,1,1,1,1,1,medium,Model swap only
+A004,BASE01,memory,1,1,0,1,1,1,1,1,1,1,medium,Memory reset only
+A005,BASE01,tools,1,1,1,0,1,1,1,1,1,1,medium,Tool substitution only
+A006,BASE01,authority,1,1,1,1,0,1,1,1,1,1,high,Authority expansion without model change
+A007,BASE01,policy,1,1,1,1,1,0,1,1,1,1,high,Governance/policy change
+A008,BASE01,retrieval,1,1,1,1,1,1,0,1,1,1,high,Knowledge boundary change
+A009,BASE01,runtime,1,1,1,1,1,1,1,0,1,1,medium,Deployment migration
+A010,BASE01,role,1,1,1,1,1,1,1,1,0,1,high,Business function reassignment
+A011,BASE01,memory+identifier,0,1,0,1,1,1,1,1,1,0,high,Forked trajectory with new technical identity
+A012,BASE01,model+identifier,0,0,1,1,1,1,1,1,1,0,high,New model and new technical identity but preserved operational envelope
+A013,BASE01,authority+tools,1,1,1,0,0,1,1,1,1,1,high,Capability expansion
+A014,BASE01,policy+authority+role,1,1,1,1,0,0,1,1,0,1,very_high,Same ID/model but operational remit transformed
+A015,BASE01,model+memory+tools+authority+policy+retrieval+runtime+role,1,0,0,0,0,0,0,0,0,1,very_high,Identity label preserved while most operational dimensions change
+A016,BASE01,provenance,1,1,1,1,1,1,1,1,1,0,high,Operationally unchanged but lineage evidence broken
+A017,BASE01,memory+runtime,1,1,0,1,1,1,1,0,1,1,high,Restart without history continuity
+A018,BASE01,model+policy,1,0,1,1,1,0,1,1,1,1,high,Provider/model plus policy update
+A019,BASE01,retrieval+role,1,1,1,1,1,1,0,1,0,1,very_high,Same engine under new information and purpose boundary
+A020,BASE01,all_except_function,0,0,0,0,1,1,0,0,1,0,very_high,Many substrate changes while nominal function preserved
