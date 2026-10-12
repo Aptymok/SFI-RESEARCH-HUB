@@ -20,7 +20,11 @@ This repository separates four layers that must not be collapsed:
 
 A commit is not a release. A release is not automatically a DOI. A DOI is not evidence that a claim is true.
 
-## Current program
+## Transferred Method Lab public research
+
+See the [current transferred-object inventory](REPORTING/OBJECT_INDEX.md) for evidence-bounded public packages actually present in this repository. A package's presence is not evidence of independent validation, a recorded external RETURN, a GitHub Release, or a DOI. Method Lab remains authoritative for active research state and public-safe transport requires the existing governed approval.
+
+## Foundational research program
 
 | ID | Research object | Role | Current state |
 |---|---|---|---|
@@ -58,6 +62,8 @@ STATUS.md                     current state matrix
 02_AI_OBSERVABILITY/          SFI-B
 03_SYSTEM_FRICTION_THEORY/    SFI-C0 / later SFI-C1
 04_CHI_2027/                  anonymous review surface
+05_RESEARCH_OBJECTS/         authorized public research derivatives
+REPORTING/OBJECT_INDEX.md    generated inventory of transferred public packages
 SHARED/                       schemas/templates shared across objects
 REPRODUCE.md                  reproducibility instructions
 GOVERNANCE.md                 epistemic/evidence rules
