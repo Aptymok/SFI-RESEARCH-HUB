@@ -1,0 +1,46 @@
+name: Research Hub public-package index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '05_RESEARCH_OBJECTS/**/manifest.json'
+      - '05_AUDITS/**/manifest.json'
+      - 'scripts/sync_research_hub.py'
+      - '.github/workflows/research-hub-index.yml'
+  pull_request:
+    paths:
+      - '05_RESEARCH_OBJECTS/**'
+      - '05_AUDITS/**'
+      - '00_REGISTRY/research_registry.yaml'
+      - 'REPORTING/OBJECT_INDEX.md'
+      - 'scripts/sync_research_hub.py'
+      - '.github/workflows/research-hub-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  derived-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh projections from public package manifests
+        run: python scripts/sync_research_hub.py
+      - name: Fail closed on stale pull request projections
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- 00_REGISTRY/research_registry.yaml REPORTING/OBJECT_INDEX.md
+      - name: Commit derived inventory after governed package transport
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 00_REGISTRY/research_registry.yaml REPORTING/OBJECT_INDEX.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: refresh derived Research Hub package inventory"
+            git push
+          fi
