@@ -1,6 +1,10 @@
 # Latest SFI Research State
 
-As of 2026-08-20, the governed research state has been integrated into `main`.
+This is the last manually authored **program-level assessment (2026-08-20)**, preserved with its original scientific meaning.
+
+**Updated transferred-object inventory:** [OBJECT_INDEX.md](OBJECT_INDEX.md). This separate generated view tracks public packages actually present in GitHub. It is not a new scientific evaluation, release, DOI or external execution RETURN.
+
+As of 2026-08-20, the governed foundational research state had been integrated into `main`.
 
 Canonical detailed report: `REPORTING/STATE_2026-08-20.md`.
 
