@@ -1,6 +1,8 @@
 # SFI Research Hub — Current Status
 
-Snapshot date: 2026-08-19
+**Foundational scientific snapshot:** 2026-08-19 (historical; not a live status feed).
+
+**Research objects now present in this GitHub repository:** [REPORTING/OBJECT_INDEX.md](REPORTING/OBJECT_INDEX.md). That automatically maintained inventory is separate from the scientific assessment below. The addition of Knight Capital 2012 does not validate SFT, MIHM-T, LCI, or any other hypothesis.
 
 | Research object | Core question | Protocol | Data state | Result state | Manuscript state | Epistemic state |
 |---|---|---|---|---|---|---|
