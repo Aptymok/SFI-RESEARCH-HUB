@@ -13,6 +13,7 @@ This repository is the governed research workspace for the System Friction Insti
 7. `04_CHI_2027/` — anonymous review/export surface for the CHI route.
 8. `REPRODUCE.md` — how to rerun available synthetic engineering checks.
 9. `RELEASES_AND_ZENODO.md` — how frozen versions become citable research objects.
+10. `REPORTING/OBJECT_INDEX.md` — current inventory of approved, transferred Method Lab public packages (not scientific validation or DOI).
 
 ## Epistemic labels
 
