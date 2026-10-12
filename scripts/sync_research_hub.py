@@ -106,7 +106,7 @@ def render_registry(original, items):
         result = original[:boundary.start()] + rendered + "\n" + original[boundary.start():]
     dates = [str(manifest.get("generatedAt", ""))[:10] for _, manifest, _ in items]
     if dates and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) for d in dates):
-        match = re.search(r"(?m)^updated:\s*(\d{4}-\d{2}-\d{2})\s*$", result)
+        match = re.search(r"(?m)^updated:[ \t]*(\d{4}-\d{2}-\d{2})[ \t]*$", result)
         if match:
             result = result[:match.start()] + "updated: " + max([match.group(1)] + dates) + result[match.end():]
     return result.rstrip() + "\n"
