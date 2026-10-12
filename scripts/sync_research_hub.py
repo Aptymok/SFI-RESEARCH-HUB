@@ -1,18 +1,14 @@
 #!/usr/bin/env python3
 """Refresh public, derived Research Hub projections from committed Method Lab manifests.
-This cannot alter Method Lab, approve promotion, mint a RETURN, or publish a DOI.
+This cannot alter Method Lab, the manually governed research registry, frozen hypotheses,\napprove promotion, mint a RETURN, or publish a DOI.
 """
 from __future__ import annotations
 import argparse
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "00_REGISTRY" / "research_registry.yaml"
 INDEX = ROOT / "REPORTING" / "OBJECT_INDEX.md"
-BEGIN = "# BEGIN GENERATED METHOD LAB PACKAGE INVENTORY"
-END = "# END GENERATED METHOD LAB PACKAGE INVENTORY"
 REQUIRED = ("README.md", "FINDINGS.md", "PUBLIC_TRACE.md", "METRICS.json",
             "PROVENANCE.md", "THREATS_TO_VALIDITY.md", "manifest.json")
 
@@ -34,9 +30,6 @@ def packages():
 
 def md(value):
     return str(value if value is not None else "UNKNOWN").replace("|", r"\|").replace("\n", " ").strip()
-
-def yaml_value(value):
-    return json.dumps(value, ensure_ascii=False)
 
 def render_index(items):
     lines = [
@@ -74,52 +67,12 @@ def render_index(items):
     ])
     return "\n".join(lines)
 
-def render_registry(original, items):
-    if (BEGIN in original) != (END in original):
-        raise ValueError("Partial managed inventory markers in research registry")
-    block = [BEGIN]
-    for directory, manifest, obj in items:
-        fields = {
-            "id": obj["objectId"], "title_en": obj.get("title", obj["objectId"]),
-            "role": "transferred_public_derivative",
-            "state": obj.get("state", "UNKNOWN"),
-            "epistemic_state": obj.get("epistemicState", "UNKNOWN"),
-            "publication_state": obj.get("publicationState", "UNKNOWN"),
-            "return_state": obj.get("returnState", "UNKNOWN"),
-            "version": str(obj.get("version", "UNKNOWN")),
-            "source_snapshot_at": manifest.get("generatedAt", "UNKNOWN"),
-            "repository_path": directory,
-            "hub_package_presence": "PRESENT_IN_GITHUB",
-        }
-        for i, (name, value) in enumerate(fields.items()):
-            block.append(f"  - {name}: {yaml_value(value)}" if i == 0 else f"    {name}: {yaml_value(value)}")
-    block.append(END)
-    rendered = "\n".join(block)
-    if BEGIN in original:
-        start = original.index(BEGIN)
-        stop = original.index(END, start) + len(END)
-        result = original[:start] + rendered + original[stop:]
-    else:
-        boundary = re.search(r"(?m)^policies:\s*$", original)
-        if boundary is None:
-            raise ValueError("Missing policies anchor in research registry")
-        result = original[:boundary.start()] + rendered + "\n" + original[boundary.start():]
-    dates = [str(manifest.get("generatedAt", ""))[:10] for _, manifest, _ in items]
-    if dates and all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) for d in dates):
-        match = re.search(r"(?m)^updated:[ \t]*(\d{4}-\d{2}-\d{2})[ \t]*$", result)
-        if match:
-            result = result[:match.start()] + "updated: " + max([match.group(1)] + dates) + result[match.end():]
-    return result.rstrip() + "\n"
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true", help="Fail if projections have drifted.")
     args = parser.parse_args()
     items = packages()
-    expected = {
-        INDEX: render_index(items),
-        REGISTRY: render_registry(REGISTRY.read_text(encoding="utf-8"), items),
-    }
+    expected = {INDEX: render_index(items)}
     drift = [p for p, content in expected.items() if not p.exists() or p.read_text(encoding="utf-8") != content]
     if args.check:
         if drift:
