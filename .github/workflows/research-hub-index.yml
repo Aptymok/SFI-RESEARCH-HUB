@@ -18,23 +18,33 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  derived-inventory:
+  check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Refresh projections from public package manifests
+      - name: Verify transferred packages and derived inventory are synchronized
+        run: python scripts/sync_research_hub.py --check
+
+  update:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recompute public inventory only after authorized package transport
         run: python scripts/sync_research_hub.py
-      - name: Fail closed on stale pull request projections
-        if: github.event_name == 'pull_request'
-        run: git diff --exit-code -- REPORTING/OBJECT_INDEX.md
-      - name: Commit derived inventory after governed package transport
-        if: github.event_name != 'pull_request'
+      - name: Persist derived inventory (never hypothesis, publication or research state)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
