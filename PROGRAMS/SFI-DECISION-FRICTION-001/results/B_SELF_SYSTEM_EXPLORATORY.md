@@ -1,3 +1,5 @@
+> **RECTIFICACIÓN CIENTÍFICA:** [CORRIGENDUM 001](../CORRIGENDUM_001.md). La observación real de Supabase y Neon conserva valor técnico; la descripción MIHM no es ejecución nativa de MIHM-T. El antiguo `NO_DEMONSTRATED_INCREMENT` NO constituye una evaluación negativa del método MIHM. Estado: `MIHM_NOT_EVALUATED`.
+
 # B — SFI continuity: bounded operational friction study (exploratory)
 
 **Date:** 2026-10-20 UTC
