@@ -1,3 +1,5 @@
+> **RECTIFICACIÓN:** [CORRIGENDUM 001](../CORRIGENDUM_001.md). Esta es una representación manual inspirada en MIHM; no constituye ejecución del contrato canónico ni de MIHM-T. No debe emplearse para calcular la validez o efectividad del método.
+
 # M1 · MIHM/experimental MIHM-T documentary reconstruction
 
 **SFI-DF-001 A / exploratory documentary analysis / 2026-10-20.**
