@@ -53,4 +53,6 @@ The intended permanent venue for accepted methods and results is this SFI Resear
 - Implement and test one real public, privacy-safe intake-to-admission handoff using existing site persistence and Case Platform; do not collect sensitive files through an open public form.
 - Seek case C through that live invitation, not founder cold outreach.
 
-**Scientific status at this commit: DRAFT / NOT RUN / NOT ACCEPTED.**
+**Scientific status at this commit: DRAFT / A DOCUMENTARY EXPLORATORY READINGS RECORDED / INDEPENDENT SCIENTIFIC COMPARISON NOT RUN / NOT ACCEPTED.**
+
+Exploratory A outputs: [M0 conventional](results/A_M0_CONVENTIONAL.md), [M1 MIHM](results/A_M1_MIHM.md), [comparison and limitations](results/A_COMPARISON.md). These were authored in one ChatGPT session on a curated source packet, so they cannot demonstrate independent model superiority. The findings include NO_DEMONSTRATED_INCREMENT, which must not be reinterpreted as an empirical falsification of the whole MIHM program.
