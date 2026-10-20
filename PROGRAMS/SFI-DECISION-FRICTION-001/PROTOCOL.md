@@ -1,3 +1,5 @@
+> **CORRECCIÓN POST HOC:** [CORRIGENDUM 001](CORRIGENDUM_001.md) prevalece sobre interpretaciones de las lecturas A/B como ensayos MIHM. El protocolo de esta página es un **diseño prospectivo**, no documentación de una ejecución nativa de MIHM-T. Las pruebas anteriores quedan fuera de su población de validación.
+
 # SFI-DF-001 — Scientific protocol (draft, unregistered)
 
 **Version:** 0.1.0-draft / 2026-10-20
