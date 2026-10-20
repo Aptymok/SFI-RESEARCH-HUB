@@ -1,3 +1,5 @@
+> **RECTIFICACIÓN CIENTÍFICA:** [CORRIGENDUM 001](../CORRIGENDUM_001.md). Dos lecturas documentales elaboradas en una misma sesión no son un ensayo experimental nativo de MIHM/MIHM-T. El antiguo `NO_DEMONSTRATED_INCREMENT` describe sólo esas dos lecturas y NO una refutación, fracaso o medición del método MIHM. Estado científico: `MIHM_NOT_EVALUATED`.
+
 # Comparative reading · M0 vs M1 (pilot A, researcher audit)
 
 **Comparison date:** 2026-10-20
