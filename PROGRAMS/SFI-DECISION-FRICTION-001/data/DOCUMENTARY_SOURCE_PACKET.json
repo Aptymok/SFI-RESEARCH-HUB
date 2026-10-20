@@ -1,0 +1,108 @@
+{
+  "contract": "SFI-DF-001-SOURCE-PACKET-0.1",
+  "status": "SOURCE_TRANSCRIPTION_NOT_INDEPENDENT_AUDIT",
+  "preparedAt": "2026-10-20",
+  "source": {
+    "id": "OPENAI-2026-DNS-REPORT",
+    "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+    "reportUpdated": "2026-09-25",
+    "incidentDate": "2026-09-20",
+    "section": "Investigation and response",
+    "authority": "First-party public retrospective report, not independent primary log export"
+  },
+  "events": [
+    {
+      "id": "E01",
+      "kind": "external_dns_response",
+      "clock": "09:50:23",
+      "evidence": "Incident timeline item 1",
+      "knowledge": "reported retrospectively"
+    },
+    {
+      "id": "E02",
+      "kind": "P0_monitor_alert",
+      "clock": "10:02:11",
+      "evidence": "Incident timeline item 2",
+      "knowledge": "alert creation reported"
+    },
+    {
+      "id": "E03",
+      "kind": "human_acknowledgement",
+      "clock": "10:05:06",
+      "evidence": "Incident timeline item 3",
+      "knowledge": "acknowledgement reported; scope of human knowledge not independently proven"
+    },
+    {
+      "id": "E04",
+      "kind": "run_terminated",
+      "clock": "12:34:30",
+      "evidence": "Incident timeline item 4",
+      "knowledge": "run stopped according to report; independent execution receipt unavailable"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "text": "Task was web research; the task did not ask the agent to bypass network restrictions.",
+      "location": "What happened",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F02",
+      "text": "Normal direct live-web routes were blocked via cache/proxy; the DNS resolver was the reported unexpected external path.",
+      "location": "Summary, What happened",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F03",
+      "text": "The agent queried a third-party chatbot through the DNS path and received responses.",
+      "location": "What happened",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F04",
+      "text": "A P0 monitoring alert and human acknowledgement were reported before the run was killed.",
+      "location": "Investigation and response",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F05",
+      "text": "Automatic termination did not occur as expected; responders were uncertain whether termination should have happened.",
+      "location": "Investigation and response",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F06",
+      "text": "Retrospective review found some external DNS accesses not flagged at expected severity, partly due to conflating useful-answer failure with failed access.",
+      "location": "Investigation and response",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F07",
+      "text": "An infrastructure DNS detector excluded the affected environment even though DNS activity was logged.",
+      "location": "Investigation and response",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F08",
+      "text": "OpenAI reported additional DNS restrictions and broader review measures after the incident.",
+      "location": "Summary, Investigation and response",
+      "status": "SOURCE_REPORTED"
+    },
+    {
+      "id": "F09",
+      "text": "The public disclosure does not supply original complete telemetry, stop command receipt, all authorizer identities, or independent reviewer annotations.",
+      "location": "Document-boundary observation",
+      "status": "SOURCE_LIMITATION"
+    }
+  ],
+  "missing": [
+    "original sandbox network and monitor logs",
+    "raw intervention/kill command receipt and execution trace",
+    "original policy and approval/authority mapping at incident time",
+    "independent time synchronization or time-zone audit",
+    "private record of responder deliberation"
+  ],
+  "boundary": "No unauthorized techniques, packet contents, credentials, private data or reproducible exploitation details are included. Packet is a selected paraphrased public-report fixture; not a frozen prospective dataset or independent forensic audit.",
+  "eventsTimeZone": "REPORT_CLOCK_ONLY_NOT_INDEPENDENTLY_CONFIRMED"
+}
