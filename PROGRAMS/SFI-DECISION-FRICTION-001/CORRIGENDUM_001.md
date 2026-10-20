@@ -58,3 +58,10 @@ Este documento es una **rectificación editorial y epistemológica posterior a l
 El defecto `system-friction#791` continúa como incidencia técnica real e independiente de este problema de método.
 
 **Conclusión corregida:** `MIHM_METHOD_NOT_EVALUATED_BY_SFI_DF_001_A_OR_B`. Sólo se evaluaron lecturas documentales y pronosticadores auxiliares de ingeniería.
+
+## 7. Recibos verificables de Method Lab
+
+- Evento original conservado: `94057a3b-7bce-4889-94bb-d38f862773da`, secuencia 1245, clase `derived`.
+- Evento de rectificación añadido: `804fceb8-e24c-4bb8-9e94-51ea8ddefdcb`, secuencia 1246, clase `derived`, comando idempotente `SFI-DF-001-CORRIGENDUM-001-20261020-V1`.
+- Ambos fueron verificados mediante consulta de solo lectura a `public.epistemic_events` en Supabase el 20-10-2026. La enmienda no mutó la fila original ni el registro de hipótesis.
+- Registro correctivo ≠ promoción al canon ni reevaluación experimental de MIHM. La decisión formal sobre una futura publicación sigue pendiente.
