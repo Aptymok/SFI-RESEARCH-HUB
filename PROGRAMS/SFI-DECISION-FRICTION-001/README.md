@@ -1,3 +1,5 @@
+**Rectificación posterior al ensayo (20-10-2026):** [CORRIGENDUM 001](CORRIGENDUM_001.md). Ninguna comparación A/B ejecutó MIHM/MIHM-T como método nativo. El pronosticador temporal llamado M1 fue una regresión auxiliar; sus métricas no constituyen un resultado científico de MIHM. Este programa conserva las observaciones y el historial original, pero su estado correcto es `MIHM_METHOD_NOT_EVALUATED_BY_SFI_DF_001_A_OR_B`.
+
 **CORRECCIÓN METODOLÓGICA POSTERIOR (2026-10-20):** [CORRIGENDUM 001](CORRIGENDUM_001.md). Las comparativas A/B NO ejecutaron el método nativo MIHM/MIHM-T y no son pruebas científicas a favor ni en contra de él. El benchmark temporal B fue una regresión auxiliar, no MIHM. Conservar como ingeniería/QA; estado científico correcto: `MIHM_METHOD_NOT_EVALUATED_BY_SFI_DF_001_A_OR_B`.
 
 # SFI-DF-001 — Decision, execution and consequence friction
