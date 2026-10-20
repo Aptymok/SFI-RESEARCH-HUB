@@ -1,3 +1,5 @@
+**CORRECCIÓN METODOLÓGICA POSTERIOR (2026-10-20):** [CORRIGENDUM 001](CORRIGENDUM_001.md). Las comparativas A/B NO ejecutaron el método nativo MIHM/MIHM-T y no son pruebas científicas a favor ni en contra de él. El benchmark temporal B fue una regresión auxiliar, no MIHM. Conservar como ingeniería/QA; estado científico correcto: `MIHM_METHOD_NOT_EVALUATED_BY_SFI_DF_001_A_OR_B`.
+
 # SFI-DF-001 — Decision, execution and consequence friction
 
 **Institution:** System Friction Institute (SFI)
