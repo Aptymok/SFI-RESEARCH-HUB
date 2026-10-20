@@ -1,3 +1,5 @@
+> **RECTIFICACIÓN CIENTÍFICA:** [CORRIGENDUM 001](../CORRIGENDUM_001.md). Este benchmark compara dos modelos de regresión, NO la metodología MIHM ni su instrumento MIHM-T. Conservar los datos y cifras como una prueba de ingeniería. La interpretación científica correcta es `MIHM_NOT_EVALUATED`.
+
 # SFI-DF-001 B: Retrospective throughput experiment (2026-10-20)
 
 **Classification:** exploratory engineering benchmark, no scientific validation or native MIHM-T run.
