@@ -96,4 +96,4 @@ AI systems may extract, classify, propose rival hypotheses, generate M0/M1 draft
 
 Canonical raw receipts stay with their lawful custodians; sanitized index, source-vintage matrix, definitions, code, rubric, blinded comparisons, negative cases and exact freeze commit go in the Research Hub once authorized. Any DOI/Zenodo release is a later explicit scientific publication decision.
 
-**Status: proposed scientific protocol; no model run, external intake or human independent adjudication recorded.**
+**Status: draft, not preregistered. One non-blinded SAME-SESSION exploratory documentary M0/M1 reading is recorded separately; no logged API-model experiment, Case Platform admission, external intake, or independent human adjudication. Criteria have not been prospectively tested.**
