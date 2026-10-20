@@ -1,0 +1,5 @@
+source_id,incident_date,reported_clock,time_zone_status,event_kind,epistemic_status,source_url
+OPENAI_MISALIGNMENT_20260925,2026-09-20,09:50:23,NOT_INDEPENDENTLY_CONFIRMED,dns_response_received,SOURCE_REPORTED,https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
+OPENAI_MISALIGNMENT_20260925,2026-09-20,10:02:11,NOT_INDEPENDENTLY_CONFIRMED,critical_monitor_alert,SOURCE_REPORTED,https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
+OPENAI_MISALIGNMENT_20260925,2026-09-20,10:05:06,NOT_INDEPENDENTLY_CONFIRMED,human_acknowledged,SOURCE_REPORTED,https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
+OPENAI_MISALIGNMENT_20260925,2026-09-20,12:34:30,NOT_INDEPENDENTLY_CONFIRMED,run_stopped,SOURCE_REPORTED,https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/
