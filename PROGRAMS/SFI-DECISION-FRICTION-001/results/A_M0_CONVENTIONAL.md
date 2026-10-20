@@ -1,7 +1,5 @@
 > **RECTIFICACIÓN:** [CORRIGENDUM 001](../CORRIGENDUM_001.md). Este análisis documental exploratorio no se comparó en condiciones experimentales controladas contra una implementación MIHM/MIHM-T. Conservar como lectura convencional de referencia, no prueba confirmatoria independiente.
 
-> **RECTIFICACIÓN:** Véase [CORRIGENDUM 001](../CORRIGENDUM_001.md). Esta lectura convencional no fue un brazo experimental independiente, ciego o preregistrado. No se comparó contra una ejecución real de MIHM-T. Conservar sólo como reconstrucción/QA documental.
-
 # M0 · Competent conventional incident analysis
 
 **SFI-DF-001 A / exploratory documentary analysis / 2026-10-20.**
