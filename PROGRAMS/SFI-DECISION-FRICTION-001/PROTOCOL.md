@@ -30,7 +30,7 @@ A negative finding is not proof that all MIHM research is false. It limits the d
 
 **M1 SFI:** Use the existing MIHM bounded system/node/relation/constraint/perturbation representation. Apply MIHM-T only if parent system, source/target dimensions, time clocks, lag hypothesis and source lineage pass existing admissibility gates. Explicitly separate event time, public source time and actual knowledge time. Reconstruction backward from an observed consequence is RETROLONGITUDINAL, never prospective prediction.
 
-Neither M0 nor M1 may use information beyond its frozen as-of packet; both may declare UNKNOWN, missing records and abstention. No global friction number or common Phi is added.
+Neither M0 nor M1 may use information beyond its frozen as-of packet; both may declare UNKNOWN, missing records and abstention. No global friction number or common Phi is added. **Model control:** within a paired LLM-assisted comparison, both arms MUST use the same provider/model/snapshot and the same information and computational budget; independent Claude/Gemini models are separate challenge/replication strata, not one M0 arm against a GPT M1 arm.
 
 ### 4. Initial observable dimensions
 
