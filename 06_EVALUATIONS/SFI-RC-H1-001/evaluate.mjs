@@ -6,7 +6,7 @@ const sourceById=new Map(registry.sources.map(source=>[source.id,source]));
 assert.equal(sourceById.size,registry.sources.length,'source IDs must be unique');
 assert.equal(new Set(registry.claims.map(claim=>claim.id)).size,registry.claims.length,'claim IDs must be unique');
 for(const source of registry.sources){
- assert(/^\\d{4}-\\d{2}-\\d{2}$/.test(source.published),'published date must be ISO');
+ assert(/^\d{4}-\d{2}-\d{2}$/.test(source.published),'published date must be ISO');
  assert(source.url.startsWith('https://'),'public HTTPS source required');
 }
 for(const claim of registry.claims){
