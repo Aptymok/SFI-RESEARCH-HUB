@@ -20,6 +20,9 @@ Sources: issuer [August 2, 2012 filing](https://www.sec.gov/Archives/edgar/data/
 **Derived:** an explicit source-vintage cutoff withheld 4/7 later-source claims at T0. The date-blind control is designed to fail by ignoring source publication date. This is validation of a deterministic rule, **not evidence that SFI outperforms a serious conventional provenance or archival method**.
 
 ## Next genuinely comparative H1 study
+
+The separately recorded [independent trial protocol](INDEPENDENT_TRIAL_PROTOCOL.md) preserves a fair baseline, held-out incidents and a requirement for independent evaluators. It is a protocol candidate, not evidence of recruitment or execution.
+
 Pre-register matched packets and time budgets for (A) standard provenance/version-control workflow and (B) typed Reality Chain. Recruit independent raters; blind scoring; allow abstention; assess correct reconstructions, temporal leakage, unsupported causal claims, inter-rater agreement, labor cost and sensitivity to source volume. Hold out sources and retain negative cases. Define superiority before observing outcomes. No such trial has been performed here.
 
 ## Status / permissions
