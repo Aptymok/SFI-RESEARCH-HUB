@@ -7,6 +7,7 @@ execution RETURN, GitHub Release, or Zenodo/DOI publication receipt.
 | Object | Version | Epistemic state | Source publication state | Public package | RETURN | Source snapshot |
 |---|---|---|---|---|---|---|
 | [Knight Capital 2012: Evidence-Bounded Retrolongitudinal Reconstruction](../05_RESEARCH_OBJECTS/SFI-KNIGHT-2012-TRIPLE-RESEARCH-001/README.md) | 0.4.0 | NOT_TESTED | PUBLIC_DERIVATIVE_READY | PRESENT_IN_GITHUB | NOT_APPLICABLE | 2026-10-11T09:55:28.581+00:00 |
+| [Institutional Reality as a Correctible Evidence Chain](../05_RESEARCH_OBJECTS/SFI-RC-2026-METHOD-001/README.md) | 0.2.0 | NOT_TESTED | PUBLIC_DERIVATIVE_READY | PRESENT_IN_GITHUB | PENDING | 2026-11-17T01:00:50.361+00:00 |
 
 ### Authority and update boundaries
 
