@@ -1,0 +1,49 @@
+{
+  "contract": "SFI-RC-H1-001-RESULT-0.1",
+  "status": "DERIVED_SELF_TEST",
+  "h1ComparativeTrial": "NOT_TESTED",
+  "sources": 3,
+  "claims": 7,
+  "cuts": [
+    {
+      "cutoff": "2012-08-02",
+      "eligibleIds": [
+        "K01",
+        "K02",
+        "K03"
+      ],
+      "withheldIds": [
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "eligibleCount": 3,
+      "withheldCount": 4,
+      "dateBlindNegativeControlWouldInclude": 7
+    },
+    {
+      "cutoff": "2013-10-16",
+      "eligibleIds": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "withheldIds": [],
+      "eligibleCount": 7,
+      "withheldCount": 0,
+      "dateBlindNegativeControlWouldInclude": 7
+    }
+  ],
+  "limits": [
+    "Hand-selected claim set, same author controls the instrument and outcome.",
+    "Counterfactual date-blind arm is an intentionally defective negative control, not an independently tested conventional workflow.",
+    "Source availability in selected set does not imply that other contemporaneous sources were unavailable.",
+    "No independent raters, randomization, source volume matching, time/cost equivalence, independent replication or external RETURN.",
+    "The documents are issuer statements/regulatory findings, not primary trading system logs."
+  ]
+}
