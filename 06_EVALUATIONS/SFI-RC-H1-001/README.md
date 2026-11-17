@@ -1,6 +1,6 @@
 # SFI-RC-H1-001 — Documentary vintage stress test
 
-**Parent:** [Reality Chain working paper v0.2.0](../../05_RESEARCH_OBJECTS/SFI-RC-2026-METHOD-001/EDITORIAL_V4_TECHNICAL_RECORD.md) · **Evaluation type:** deterministic retrospective self-test, **not** an independent H1 experiment.
+**Parent:** [Reality Chain working paper](../../05_RESEARCH_OBJECTS/SFI-RC-2026-METHOD-001/PUBLICATION_RECORD.md) · **Evaluation type:** deterministic retrospective self-test, **not** an independent H1 experiment.
 
 ## Narrow research question
 Does the temporal eligibility rule prohibit retroactive use of 2013 SEC information when reconstructing what the **selected public documents** supported on 2 August 2012?
