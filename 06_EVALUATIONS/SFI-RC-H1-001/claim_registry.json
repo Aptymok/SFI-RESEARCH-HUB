@@ -1,0 +1,94 @@
+{
+  "contract": "SFI-REALITY-CHAIN-H1-DOCUMENTARY-PROBE-0.1",
+  "objectId": "SFI-RC-H1-001",
+  "parentId": "SFI-RC-2026-METHOD-001",
+  "testKind": "RETROSPECTIVE_DOCUMENTARY_CUTOFF_VALIDATION",
+  "state": "DERIVED_SELF_TEST_NOT_INDEPENDENT_H1_TRIAL",
+  "cutoffs": [
+    "2012-08-02",
+    "2013-10-16"
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Knight Capital issuer statement (SEC EDGAR Exhibit 99.1)",
+      "published": "2012-08-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1060749/000119312512332176/d391111dex991.htm",
+      "role": "Issuer disclosure, not independent verification of internal logs."
+    },
+    {
+      "id": "S02",
+      "title": "SEC administrative order 34-70694",
+      "published": "2013-10-16",
+      "url": "https://www.sec.gov/files/litigation/admin/2013/34-70694.pdf",
+      "role": "Retrospective SEC findings in settlement; Knight consented without admitting or denying findings except jurisdiction."
+    },
+    {
+      "id": "S03",
+      "title": "SEC press release 2013-222",
+      "published": "2013-10-16",
+      "url": "https://www.sec.gov/newsroom/press-releases/2013-222",
+      "role": "Public 2013 regulator summary, not contemporary August 2012 evidence."
+    }
+  ],
+  "claims": [
+    {
+      "id": "K01",
+      "source": "S01",
+      "eventDate": "2012-08-01",
+      "claim": "Knight disclosed a technology issue at the NYSE open on August 1, 2012.",
+      "locator": "Issuer Exhibit 99.1, first body paragraph",
+      "state": "ISSUER_DISCLOSED"
+    },
+    {
+      "id": "K02",
+      "source": "S01",
+      "eventDate": "2012-08-01",
+      "claim": "Knight attributed erroneous orders to software installation in the August 2 statement.",
+      "locator": "Issuer Exhibit 99.1, second body paragraph",
+      "state": "ISSUER_DISCLOSED"
+    },
+    {
+      "id": "K03",
+      "source": "S01",
+      "eventDate": "2012-08-01",
+      "claim": "Knight reported about USD 440 million realized pre-tax loss on August 2.",
+      "locator": "Issuer Exhibit 99.1, fourth body paragraph",
+      "state": "ISSUER_REPORTED_ESTIMATE"
+    },
+    {
+      "id": "K04",
+      "source": "S02",
+      "eventDate": "2012-08-01",
+      "claim": "The SEC later found code had not been copied to one of eight SMARS servers.",
+      "locator": "SEC Order 34-70694, paragraph 15, page 5",
+      "state": "RETROSPECTIVE_REGULATOR_FINDING"
+    },
+    {
+      "id": "K05",
+      "source": "S02",
+      "eventDate": "2012-08-01",
+      "claim": "The SEC later found that 212 parent orders were processed by defective code.",
+      "locator": "SEC Order 34-70694, paragraph 17, page 6",
+      "state": "RETROSPECTIVE_REGULATOR_FINDING"
+    },
+    {
+      "id": "K06",
+      "source": "S03",
+      "eventDate": "2012-08-01",
+      "claim": "The SEC later disclosed 97 internal automated emails associated with failure.",
+      "locator": "SEC press release 2013-222, discussion of automated emails",
+      "state": "RETROSPECTIVE_REGULATOR_FINDING"
+    },
+    {
+      "id": "K07",
+      "source": "S02",
+      "eventDate": "2012-08-01",
+      "claim": "The SEC order found violation of Rule 15c3-5 market-access controls.",
+      "locator": "SEC Order 34-70694, paragraphs 9-10, pages 3-4",
+      "state": "RETROSPECTIVE_REGULATOR_FINDING"
+    }
+  ],
+  "rule": "A claim is eligible at a cutoff only if its cited document was published by that date; event dates do not establish public availability.",
+  "negativeControl": "Date-blind selection is an intentionally faulty software control, not a representative conventional research workflow."
+}
