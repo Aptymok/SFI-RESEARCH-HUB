@@ -1,23 +1,23 @@
-# Reality Chain — V4 institutional edition and technical record
+# Reality Chain — institutional publication and technical record
 
 **Title:** *Institutional Reality as a Correctible Evidence Chain*  
 **Author:** Juan Antonio Marín Liera · [ORCID 0009-0002-3714-1467](https://orcid.org/0009-0002-3714-1467)  
 **Author-declared affiliation:** System Friction Institute  
 **Research object:** `SFI-RC-2026-METHOD-001`  
-**Edition:** v0.2.0 · editorial cut-off 16 November 2026  
+**First publication:** 16 November 2026  
 **Class:** methodological working paper / author-approved / **not peer reviewed**  
 **DOI:** not assigned  
 **Study result:** falsifiable reporting framework, with four untested hypotheses and bounded documentary illustrations.
 
 ## Full article and verifiable identity
 
-[**Read / download the V4 editorial PDF**](SFI_Reality_Chain_Editorial_V4_v0.2.0.pdf)
+[**Read / download the institutional article PDF**](Reality_Chain.pdf)
 
-- A4; seven pages; 130,506 bytes.
-- PDF SHA-256: `f2f5e714efb18c481cdc4187bef889d16e52c5cf26cd1960a3e6553e91390030`.
-- Git blob identity: `75893f61e195f0fb40320155c3b678b2fb3d399a`.
-- Editor-approved public derivative package hash: `9f775cc34bef1e7053dc0375e2fdd0ea4255d568a0d7380c55798c05546912cb`.
-- Method Lab dossier version: `0.2.0`. The PDF is an **additional editorial artifact**: it is not falsely represented as one of the seven immutable files in the approved Method Lab manifest.
+- A4; seven pages; 176,049 bytes. Fully justified body text, automatic word hyphenation disabled.
+- PDF SHA-256: `451de9dc2feceebb8cd554e400f2c120172bb66cb0b1a56eba97a4f63f1da7ae`.
+- Git blob identity: `ace5d680574de17082aaa96e0171842e2050d0ab`.
+
+- Internal Method Lab maintains immutable event receipts and technical state snapshots. Editorial design revisions do not constitute separate scientific publications. This PDF is an **additional editorial artifact**, not one of the seven immutable files in the governed package.
 
 ## Provenance and public records
 
@@ -33,7 +33,7 @@ The internal Method Lab event ledger is the source of truth for continuing exper
 
 ## License and rights
 
-**CC BY 4.0** applies to the author's original article prose, methodological tables, and newly authored editorial diagrams as published here. License text: https://creativecommons.org/licenses/by/4.0/ . Attribution must identify Juan Antonio Marín Liera, the work, the version, and alterations.
+**CC BY 4.0** applies to the author's original article prose, methodological tables, and newly authored editorial diagrams as published here. License text: https://creativecommons.org/licenses/by/4.0/ . Attribution must identify Juan Antonio Marín Liera, the work, and any alterations.
 
 **Excluded:** third-party documents and quoted external material remain under their own rights. The SFI name, brand marks and logos do not confer endorsement or trademark permission. No private operational records are included.
 
@@ -48,10 +48,10 @@ The internal Method Lab event ledger is the source of truth for continuing exper
 
 ## Editorial specification
 
-V4 document grammar uses Noto Serif Display for headings, EB Garamond for prose, Liberation Mono for provenance/IDs and Noto Sans for functional labels. Print semantics: black/void, paper, authority gold, observation blue and neutral metadata. Figure 01 is a **declared reporting sequence**, not a measured causal graph.
+SFI institutional document grammar uses Noto Serif Display for headings, EB Garamond for prose, Liberation Mono for provenance/IDs and Noto Sans for functional labels. Print semantics: black/void, paper, authority gold, observation blue and neutral metadata. Figure 01 is a **declared reporting sequence**, not a measured causal graph.
 
 ### Method Lab ↔ Research Hub link
 
-`objectId → version → public findings/source references → assurance P1/P2 → ROOT proposal → authorized transport → Git commit + verified PDF hash → observed RETURN → later evaluation`.
+`objectId → public findings/source references → assurance P1/P2 → ROOT proposal → authorized transport → Git commit + verified PDF hash → observed RETURN → later evaluation`.
 
 This page is a separate bibliographic/editorial addendum; it does not amend the approved original seven-file manifest.
