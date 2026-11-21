@@ -6,7 +6,7 @@
 **Research object:** `SFI-RC-2026-METHOD-001`  
 **First publication:** 16 November 2026  
 **Class:** methodological working paper / author-approved / **not peer reviewed**  
-**DOI:** not assigned  
+**DOI supplied by the author (20 November 2026):** [10.5281/zenodo.24298387](https://doi.org/10.5281/zenodo.24298387) · **DECLARED / independent resolver metadata NOT_OBSERVED in this reconciliation**  
 **Study result:** falsifiable reporting framework, with four untested hypotheses and bounded documentary illustrations.
 
 ## Full article and verifiable identity
@@ -30,6 +30,10 @@ External public antecedents cited as sources, not endorsements:
 - [SEC Knight Capital Americas LLC order, Release 34-70694 (16 October 2013)](https://www.sec.gov/litigation/admin/2013/34-70694.pdf). The SEC's 2013 record is a **retrospective source**, not evidence available to operators in August 2012.
 
 The internal Method Lab event ledger is the source of truth for continuing experiments; a public research package is a bounded derivative, not a duplicate of the private evidence store.
+
+### Zenodo DOI evidence boundary
+
+The founder supplied the Zenodo DOI above for this research object. At the time of this reconciliation, a direct read of the Zenodo and DataCite record was unavailable to the operator. Thus the DOI is recorded as **author-supplied bibliographic metadata**, not an independently observed cross-check of the deposited title, files, version, or checksum. The independently readable GitHub package and article remain distinct public artifacts. A DOI is not peer review, external evaluation, adoption, or empirical RETURN.
 
 ## License and rights
 
